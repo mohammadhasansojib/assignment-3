@@ -1,0 +1,14 @@
+Input the number of elements to store in the array: 3
+myArray[0] : 32
+myArray[1] : 65
+myArray[2] : 25
+
+
+Array elements in reverse:
+myArray[2] = 25
+myArray[1] = 65
+myArray[0] = 32
+
+
+Process returned 0 (0x0)   execution time : 98.280 s
+Press any key to continue.
