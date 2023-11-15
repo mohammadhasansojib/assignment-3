@@ -1,0 +1,14 @@
+Input the number to be stored in the array: 5
+myArray[0] : 3
+myArray[1] : 5
+myArray[2] : 2
+myArray[3] : 5
+myArray[4] : 3
+
+Array : 3 5 2 5 3
+
+duplicate values: 3 5
+number of duplicate element : 2
+
+Process returned 0 (0x0)   execution time : 16.040 s
+Press any key to continue.
