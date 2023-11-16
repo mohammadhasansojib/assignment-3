@@ -73,39 +73,94 @@ int main(){
 
 
 //  problem 3: Write a program in C to find the maximum and minimum elements in an array.
-    int n, min,max;
-    printf("Input the number of elements to store in the array: ");
+//    int n, min,max;
+//    printf("Input the number of elements to store in the array: ");
+//    scanf("%d", &n);
+//
+//    int myArray[n];
+//
+//    for(int i = 0; i < n; i++){
+//        printf("myArray[%d] : ", i);
+//        scanf("%d", &myArray[i]);
+//    }
+//
+//    printf("\n\nArrays are: ");
+//    for(int i = 0; i < n; i++){
+//        printf("%d ", myArray[i]);
+//    }
+//    printf("\n");
+//
+//    min = max = myArray[0];
+//
+//    for(int i = 1; i < n; i++){
+//        if(min > myArray[i]){
+//            min = myArray[i];
+//        }
+//        if(max < myArray[i]){
+//            max = myArray[i];
+//        }
+//    }
+//
+//    printf("\nminimum element is : %d\n", min);
+//    printf("maximum element is : %d\n", max);
+
+
+
+
+
+
+
+
+// problem 4: Write a program in C to sort elements of an array in ascending and descending order.
+    int myArray[100], n, temp;
+
+    printf("Input the size of array: ");
     scanf("%d", &n);
 
-    int myArray[n];
-
-    for(int i = 0; i < n; i++){
+    printf("Input %d elements in the array: \n\n", n);
+    for(int i=0; i < n; i++)
+    {
         printf("myArray[%d] : ", i);
         scanf("%d", &myArray[i]);
     }
 
-    printf("\n\nArrays are: ");
-    for(int i = 0; i < n; i++){
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if(myArray[i] > myArray[j])
+            {
+                temp = myArray[i];
+                myArray[i] = myArray[j];
+                myArray[j] = temp;
+            }
+        }
+    }
+
+    printf("\nElements of array in sorted ascending order: ");
+    for(int i=0; i<n; i++)
+    {
         printf("%d ", myArray[i]);
+    }
+
+
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i+1; j < n; j++) {
+           if(myArray[i] < myArray[j]) {
+               temp = myArray[i];
+               myArray[i] = myArray[j];
+               myArray[j] = temp;
+           }
+        }
     }
     printf("\n");
 
-    min = max = myArray[0];
-
-    for(int i = 1; i < n; i++){
-        if(min > myArray[i]){
-            min = myArray[i];
-        }
-        if(max < myArray[i]){
-            max = myArray[i];
-        }
+    printf("Elements of array sorted in descending order: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", myArray[i]);
     }
-
-    printf("\nminimum element is : %d\n", min);
-    printf("maximum element is : %d\n", max);
-
-
-
+    printf("\n");
 
 
 
