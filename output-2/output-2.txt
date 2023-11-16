@@ -1,14 +1,15 @@
 Input the number to be stored in the array: 5
 myArray[0] : 3
 myArray[1] : 5
-myArray[2] : 2
+myArray[2] : 6
 myArray[3] : 5
 myArray[4] : 3
 
-Array : 3 5 2 5 3
+Array: 3 5 6 5 3
+duplicate elements: 3 5
 
-duplicate values: 3 5
-number of duplicate element : 2
+Total number of duplicate elements found in the array  is: 2
 
-Process returned 0 (0x0)   execution time : 16.040 s
+
+Process returned 0 (0x0)   execution time : 5.467 s
 Press any key to continue.
