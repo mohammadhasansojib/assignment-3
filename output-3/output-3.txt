@@ -1,0 +1,15 @@
+Input the number of elements to store in the array: 5
+myArray[0] : 9
+myArray[1] : 5
+myArray[2] : 4
+myArray[3] : 2
+myArray[4] : 3
+
+
+Arrays are: 9 5 4 2 3
+
+minimum element is : 2
+maximum element is : 9
+
+Process returned 0 (0x0)   execution time : 10.245 s
+Press any key to continue.
