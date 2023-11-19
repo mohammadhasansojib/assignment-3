@@ -172,39 +172,37 @@ int main(){
 
 
 // problem 5 : Write a program in C to find the transpose of a given matrix.
-int myArray[10][10], transpose[10][10], r, c;
-  printf("Input the rows and columns of the matrix: ");
-  scanf("%d %d", &r, &c);
-
-  printf("\nInput element in first matrix: \n");
-  for (int i = 0; i < r; ++i)
-  for (int j = 0; j < c; ++j) {
-    printf("myArray[%d][%d] : ", i + 1, j + 1);
-    scanf("%d", &myArray[i][j]);
-  }
-
-  printf("\nThe matrix of the given values is : \n");
-  for (int i = 0; i < r; ++i)
-  for (int j = 0; j < c; ++j) {
-    printf("%d  ", myArray[i][j]);
-    if (j == c - 1)
-    printf("\n");
-  }
-
-  for (int i = 0; i < r; ++i)
-  for (int j = 0; j < c; ++j) {
-    transpose[j][i] = myArray[i][j];
-  }
-
-  printf("\nThe transpose matrix of the given values is : \n");
-  for (int i = 0; i < c; ++i)
-  for (int j = 0; j < r; ++j) {
-    printf("%d  ", transpose[i][j]);
-    if (j == r - 1)
-    printf("\n");
-  }
-
-
+//int myArray[10][10], transpose[10][10], r, c;
+//  printf("Input the rows and columns of the matrix: ");
+//  scanf("%d %d", &r, &c);
+//
+//  printf("\nInput element in first matrix: \n");
+//  for (int i = 0; i < r; ++i)
+//  for (int j = 0; j < c; ++j) {
+//    printf("myArray[%d][%d] : ", i + 1, j + 1);
+//    scanf("%d", &myArray[i][j]);
+//  }
+//
+//  printf("\nThe matrix of the given values is : \n");
+//  for (int i = 0; i < r; ++i)
+//  for (int j = 0; j < c; ++j) {
+//    printf("%d  ", myArray[i][j]);
+//    if (j == c - 1)
+//    printf("\n");
+//  }
+//
+//  for (int i = 0; i < r; ++i)
+//  for (int j = 0; j < c; ++j) {
+//    transpose[j][i] = myArray[i][j];
+//  }
+//
+//  printf("\nThe transpose matrix of the given values is : \n");
+//  for (int i = 0; i < c; ++i)
+//  for (int j = 0; j < r; ++j) {
+//    printf("%d  ", transpose[i][j]);
+//    if (j == r - 1)
+//    printf("\n");
+//  }
 
 
 
@@ -212,6 +210,53 @@ int myArray[10][10], transpose[10][10], r, c;
 
 
 
+
+
+
+// problem 6: Write a program in C to find the sum of rows and columns of a matrix.
+     int myArray[10][10],rsum[10],csum[10],n;
+
+     printf("Input the size of the square matrix : ");
+     scanf("%d", &n);
+	 printf("Input elements in the first matrix :\n");
+       for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+	           printf("myArray[%d][%d] : ",i,j);
+	           scanf("%d",&myArray[i][j]);
+            }
+        }
+	 printf("\n\nThe matrix is :\n");
+	 for(int i=0;i<n;i++){
+	   for(int j=0;j<n ;j++)
+	     printf("% 4d",myArray[i][j]);
+	    printf("\n");
+	 }
+
+     for(int i=0;i<n;i++){
+	  rsum[i]=0;
+	  for(int j=0;j<n;j++)
+	  rsum[i]=rsum[i]+myArray[i][j];
+     }
+
+      for(int i=0;i<n;i++){
+	  csum[i]=0;
+	  for(int j=0;j<n;j++)
+		csum[i]=csum[i]+myArray[j][i];
+      }
+
+      printf("\nThe sum or rows and columns of the matrix is :\n");
+      for(int i=0;i<n;i++){
+	   for(int j=0;j<n;j++)
+	      printf("% 4d",myArray[i][j]);
+	   printf("% 8d",rsum[i]);
+	   printf("\n");
+       }
+       printf("\n");
+
+	    for(int j=0;j<n;j++){
+	        printf("% 4d",csum[j]);
+        }
+        printf("\n\n");
 
 
 
