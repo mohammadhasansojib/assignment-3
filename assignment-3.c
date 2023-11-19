@@ -112,55 +112,105 @@ int main(){
 
 
 // problem 4: Write a program in C to sort elements of an array in ascending and descending order.
-    int myArray[100], n, temp;
+//    int myArray[100], n, temp;
+//
+//    printf("Input the size of array: ");
+//    scanf("%d", &n);
+//
+//    printf("Input %d elements in the array: \n\n", n);
+//    for(int i=0; i < n; i++)
+//    {
+//        printf("myArray[%d] : ", i);
+//        scanf("%d", &myArray[i]);
+//    }
+//
+//    for(int i=0; i<n; i++)
+//    {
+//        for(int j=i+1; j<n; j++)
+//        {
+//            if(myArray[i] > myArray[j])
+//            {
+//                temp = myArray[i];
+//                myArray[i] = myArray[j];
+//                myArray[j] = temp;
+//            }
+//        }
+//    }
+//
+//    printf("\nElements of array in sorted ascending order: ");
+//    for(int i=0; i<n; i++)
+//    {
+//        printf("%d ", myArray[i]);
+//    }
+//
+//
+//
+//    for (int i = 0; i < n; i++) {
+//        for (int j = i+1; j < n; j++) {
+//           if(myArray[i] < myArray[j]) {
+//               temp = myArray[i];
+//               myArray[i] = myArray[j];
+//               myArray[j] = temp;
+//           }
+//        }
+//    }
+//    printf("\n");
+//
+//    printf("Elements of array sorted in descending order: ");
+//    for (int i = 0; i < n; i++) {
+//        printf("%d ", myArray[i]);
+//    }
+//    printf("\n");
 
-    printf("Input the size of array: ");
-    scanf("%d", &n);
-
-    printf("Input %d elements in the array: \n\n", n);
-    for(int i=0; i < n; i++)
-    {
-        printf("myArray[%d] : ", i);
-        scanf("%d", &myArray[i]);
-    }
-
-    for(int i=0; i<n; i++)
-    {
-        for(int j=i+1; j<n; j++)
-        {
-            if(myArray[i] > myArray[j])
-            {
-                temp = myArray[i];
-                myArray[i] = myArray[j];
-                myArray[j] = temp;
-            }
-        }
-    }
-
-    printf("\nElements of array in sorted ascending order: ");
-    for(int i=0; i<n; i++)
-    {
-        printf("%d ", myArray[i]);
-    }
 
 
 
-    for (int i = 0; i < n; i++) {
-        for (int j = i+1; j < n; j++) {
-           if(myArray[i] < myArray[j]) {
-               temp = myArray[i];
-               myArray[i] = myArray[j];
-               myArray[j] = temp;
-           }
-        }
-    }
+
+
+
+
+
+
+// problem 5 : Write a program in C to find the transpose of a given matrix.
+int myArray[10][10], transpose[10][10], r, c;
+  printf("Input the rows and columns of the matrix: ");
+  scanf("%d %d", &r, &c);
+
+  printf("\nInput element in first matrix: \n");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf("myArray[%d][%d] : ", i + 1, j + 1);
+    scanf("%d", &myArray[i][j]);
+  }
+
+  printf("\nThe matrix of the given values is : \n");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf("%d  ", myArray[i][j]);
+    if (j == c - 1)
     printf("\n");
+  }
 
-    printf("Elements of array sorted in descending order: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", myArray[i]);
-    }
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    transpose[j][i] = myArray[i][j];
+  }
+
+  printf("\nThe transpose matrix of the given values is : \n");
+  for (int i = 0; i < c; ++i)
+  for (int j = 0; j < r; ++j) {
+    printf("%d  ", transpose[i][j]);
+    if (j == r - 1)
     printf("\n");
+  }
+
+
+
+
+
+
+
+
 
 
 
